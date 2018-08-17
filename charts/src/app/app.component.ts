@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { WeatherService } from './weather.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'charts';
+  constructor(private _weather: WeatherService){}
+
+  /**
+   * 
+   *   ngOnInit(){
+    this._weather.dailyForecast()
+    .subscribe(res =>{console.log})
+  }
+   */
+
+
 }
